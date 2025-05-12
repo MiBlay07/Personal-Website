@@ -20,7 +20,7 @@ fig = go.Figure(
     layout=go.Layout(
         title="My Rating of Romance Tropes",
         xaxis=dict(title="Trope"),
-        yaxis=dict(title="Rating"),
+        yaxis=dict(title="My Rating"),
     )
 )
 
