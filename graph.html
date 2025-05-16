@@ -1,0 +1,44 @@
+<!-- graph.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>My Rating of Romance Tropes</h1>
+    <div id="plotly-graph"></div>
+
+    <script>
+        var data = [{
+            x: [
+                "Enemies to Lovers",
+                "Friends to Lovers",
+                "Fake Dating",
+                "Grumpy x Sunshine",
+                "Forced Proximity",
+                "Love Triangle",
+                "Second Chance",
+                "Forbidden Love"
+            ],
+            y: [10, 5, 7, 6, 8, 4, 9, 3],
+            type: 'bar',
+            marker: {color: 'indianred'}
+        }];
+
+        var layout = {
+            title: "My Rating of Romance Tropes",
+            xaxis: {title: "Trope"},
+            yaxis: {title: "Rating"}
+        };
+
+        Plotly.newPlot('plotly-graph', data, layout);
+    </script>
+
+    <footer>
+        <p>© 2025 Mi Deong Blay. All rights reserved.</p>
+    </footer>
+</body>
+</html>

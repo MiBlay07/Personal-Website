@@ -1,0 +1,37 @@
+<!-- qa.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+</head>
+<body>
+    <h1>Q&A</h1>
+    <p>Ask me anything!</p>
+
+    <!-- Form to submit questions -->
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="question">Your Question:</label>
+        <textarea id="question" name="question" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Submitted Questions:</h2>
+    {% for question in questions %}
+        <div>
+            <h3>{{ question.name }}</h3>
+            <p>{{ question.question }}</p>
+        </div>
+    {% endfor %}
+
+    <footer>
+        <p>© 2025 Mi Deong Blay. All rights reserved.</p>
+    </footer>
+</body>
+</html>
